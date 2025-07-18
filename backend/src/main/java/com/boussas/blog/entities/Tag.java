@@ -1,10 +1,7 @@
 package com.boussas.blog.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.*;
 
@@ -14,6 +11,7 @@ import java.util.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
