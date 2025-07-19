@@ -1,7 +1,6 @@
 package com.boussas.blog.security;
 
 import com.boussas.blog.entities.User;
-import jakarta.persistence.GeneratedValue;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -11,6 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
+
 @Getter
 @Setter
 @RequiredArgsConstructor
@@ -49,5 +50,9 @@ public class BlogUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public UUID getId() {
+        return user.getId();
     }
 }
